@@ -1,0 +1,47 @@
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+div[style*="background-image"] {
+  background-size: 100% auto;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+header nav[class] {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media (width <= 1024px) {
+  header[class] {
+    position: relative;
+  }
+
+  header nav[class] {
+    justify-content: center;
+    gap: 16px;
+    padding: 20px;
+  }
+}
+
+@media (width <= 680px) {
+  header nav[class] {
+    gap: 12px;
+    padding: 15px;
+  }
+
+  header nav a {
+    font-size: 12px;
+  }
+}
