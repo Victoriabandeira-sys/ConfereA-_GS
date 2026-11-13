@@ -1,0 +1,105 @@
+import { useState } from 'react'
+
+function Pratica() {
+    const [mensagem, setMensagem] = useState('')
+    const [resultadoMensagem, setResultadoMensagem] = useState('')
+    const [link, setLink] = useState('')
+    const [resultadoLink, setResultadoLink] = useState('')
+
+    function verificarMensagem() {
+        if (mensagem.trim() === '') {setResultadoMensagem('Digite uma mensagem para verificar.') 
+        return
+        }
+
+        const texto = mensagem.toLowerCase()
+
+        const palavrasSuspeitas = [
+        'pix', 'senha', 'urgente', 'clique',
+        'bloqueado', 'bloqueada', 'código',
+        'codigo', 'transferência', 'transfira'
+        ]
+
+        const suspeita = palavrasSuspeitas.some(palavra => texto.includes(palavra)
+        )
+
+        if (suspeita) {setResultadoMensagem('Atenção! Esta mensagem apresenta possíveis sinais de golpe. Não envie dinheiro ou informações pessoais sem confirmar.')
+        } else {
+        setResultadoMensagem('Não encontramos sinais comuns de golpe nesta mensagem. Mesmo assim, tenha cuidado: isso não garante que ela seja segura.')
+        }
+    }
+
+    function verificarLink() {
+        if (link.trim() === '') {setResultadoLink('Digite um link para verificar.')
+        return
+        }
+
+        try {const endereco = new URL(link.trim())
+
+        if (endereco.protocol !== 'https:' && endereco.protocol !== 'http:') {
+            setResultadoLink('Este endereço não é um link HTTP válido.')
+            return
+        }
+
+        if (
+            endereco.protocol === 'http:' ||
+            endereco.hostname.includes('xn--') ||
+            link.includes('@')
+        ) {
+            setResultadoLink('Atenção! Encontramos possíveis sinais de risco neste link. Evite acessá-lo sem confirmar a origem.')
+        } else {
+            setResultadoLink('Não encontramos alguns sinais comuns de risco. Isso não garante que o link seja seguro.')
+        }
+        } catch {setResultadoLink('Link inválido. Digite um endereço completo, começando com https://.')}
+    }
+
+return (
+    <section id="pratica" className="min-h-screen bg-blue-950 text-white px-10 py-20 max-sm:px-5">
+        <div className="max-w-6xl mx-auto">
+
+            <h2 className="text-5xl font-bold mb-6 text-center max-sm:text-3xl">Veja na Prática</h2>
+
+            <p className="text-lg text-center mb-12 max-sm:text-base">Experimente algumas funcionalidades do Confere Aí
+            e aprenda a identificar possíveis sinais de golpes.</p>
+
+            <div className="grid grid-cols-2 gap-8 max-lg:grid-cols-1">
+                <div className="border border-white/30 rounded-2xl p-8 max-sm:p-5">
+
+                <h3 className="text-2xl font-bold mb-4">Verificar Mensagem</h3>
+
+                <p className="mb-6">Recebeu uma mensagem suspeita? Cole o texto abaixo para verificar.</p>
+
+                <textarea value={mensagem} onChange={(e) => setMensagem(e.target.value)} placeholder="Digite ou cole a mensagem aqui..." className="w-full h-36 bg-white text-blue-950 p-4 rounded-xl mb-5 outline-none"/>
+
+                <button onClick={verificarMensagem} className="bg-sky-500 hover:bg-sky-400 text-white font-semibold px-8 py-3 rounded-xl transition-colors cursor-pointer">Verificar Mensagem</button>
+                
+                {resultadoMensagem && (
+                <p className="mt-6 p-4 border border-white/30 rounded-xl" role="status">{resultadoMensagem}</p>
+                )}
+
+            </div>
+
+            <div className="border border-white/30 rounded-2xl p-8 max-sm:p-5">
+
+                <h3 className="text-2xl font-bold mb-4">Verificar Link</h3>
+
+                <p className="mb-6">Recebeu um link desconhecido? Verifique possíveis sinais de risco antes de abrir.</p>
+
+                <input type="text"value={link} onChange={(e) => setLink(e.target.value)} placeholder="https://exemplo.com" className="w-full bg-white text-blue-950 p-4 rounded-xl mb-5 outline-none"/>
+
+                <button onClick={verificarLink} className="bg-sky-500 hover:bg-sky-400 text-white font-semibold px-8 py-3 rounded-xl transition-colors cursor-pointer">Verificar Link</button>
+
+                {resultadoLink && (
+                <p className="mt-6 p-4 border border-white/30 rounded-xl" role="status">{resultadoLink}</p>
+                )}
+            </div>
+
+            </div>
+
+            <p className="text-sm text-blue-200 mt-8 text-center">Esta é uma verificação inicial de sinais de risco.Não compartilhe senhas, códigos ou dados pessoais.</p>
+
+        </div>
+    </section>
+    )
+}
+
+export default Pratica
