@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 function Pratica() {
     const [mensagem, setMensagem] = useState('')
@@ -94,9 +95,14 @@ return (
             </div>
 
             </div>
-
+            
             <p className="text-sm text-blue-200 mt-8 text-center">Esta é uma verificação inicial de sinais de risco.Não compartilhe senhas, códigos ou dados pessoais.</p>
+            
+            <div className="text-center mt-12">
+                <p className="text-lg mb-5">Quer entender como identificamos possíveis golpes?</p>
 
+                <Link to="/criterios" className="inline-block border border-sky-400 text-white px-8 py-3 rounded-xl font-semibold hover:bg-sky-500 transition-all duration-300">Veja os critérios de verificação</Link>
+            </div>
         </div>
     </section>
     )
