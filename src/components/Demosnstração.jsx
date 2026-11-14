@@ -6,9 +6,13 @@ function Demostracao(){
                 <div className="w-1/2 max-lg:w-full border border-white/30 rounded-2xl p-8 transition-all duration-300 hover:-translate-y-3 hover:border-sky-400 hover:shadow-xl">
                     <h2 className="text-5xl font-bold mb-6 max-sm:text-3xl">Demonstração</h2>
 
-                    <h3 className="text-2xl font-semibold mb-5 max-sm:text-xl">Conheça o Confere Aí na prática</h3>
+                    <h3 className="text-2xl font-semibold mb-5 max-sm:text-xl text-sky-500">Conheça o Confere Aí na prática</h3>
 
-                    <p className="text-lg leading-relaxed max-sm:text-base">Confira nosso protótipo e veja como o Confere Aí foi pensado para tornar a segurança digital mais simples e acessível.</p>
+                    <div className="mt-10 border-l-2 border-sky-400 pl-5">
+                        <p className="text-sky-400 text-sm font-semibold tracking-widest mb-3">PROTÓTIPO EM AÇÃO</p>
+
+                        <p className="text-gray-300 leading-relaxed">Veja como o Confere Aí facilita a identificação de situações suspeitas e o acesso a pessoas de confiança.</p>
+                    </div>
                 </div>
                 
                 <div className="w-[300px] max-w-full rounded-[40px] border-[8px] border-black bg-black p-1 shadow-2xl">

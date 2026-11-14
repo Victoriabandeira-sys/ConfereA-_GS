@@ -63,7 +63,7 @@ return (
         <div className="max-w-5xl mx-auto border border-white/30 rounded-2xl p-8 max-sm:p-5">
             <h2 className="text-4xl font-bold mb-5 max-sm:text-3xl">Contatos de Confiança</h2>
 
-            <p className="text-lg mb-10">Cadastre pessoas de confiança para pedir ajuda quando receber algo suspeito.</p>
+            <p className="text-lg mb-10 text-sky-500">Cadastre pessoas de confiança para pedir ajuda quando receber algo suspeito.</p>
 
             <form onSubmit={salvarContato} className="grid gap-4 mb-12">
                 <input type="text" placeholder="Nome" value={nome} onChange={(e) => setNome(e.target.value)} required className="bg-white text-blue-950 p-4 rounded-xl"/>

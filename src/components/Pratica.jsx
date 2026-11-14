@@ -59,8 +59,7 @@ return (
 
             <h2 className="text-5xl font-bold mb-6 text-center max-sm:text-3xl">Veja na Prática</h2>
 
-            <p className="text-lg text-center mb-12 max-sm:text-base">Experimente algumas funcionalidades do Confere Aí
-            e aprenda a identificar possíveis sinais de golpes.</p>
+            <p className="text-lg text-center mb-12 max-sm:text-base">Experimente algumas funcionalidades do Confere Aí e aprenda a identificar possíveis sinais de golpes.</p>
 
             <div className="grid grid-cols-2 gap-8 max-lg:grid-cols-1">
                 <div className="border border-white/30 rounded-2xl p-8 max-sm:p-5">

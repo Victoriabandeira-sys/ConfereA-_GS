@@ -27,7 +27,7 @@ function Navbar() {
 
                     <p className="text-lg text-white/70 mt-6 leading-relaxed max-sm:text-base">Identifique sinais de golpes em mensagens e linkse navegue com mais segurança e confiança.</p>
 
-                    <a href="#pratica" className="inline-block mt-8 border border-sky-400 px-8 py-3 rounded-full font-semibold hover:bg-sky-400/10 hover:-translate-y-1 transition-all duration-300">Experimente agora</a>
+                    <a href="#problema" className="inline-block mt-8 border border-sky-400 px-8 py-3 rounded-full font-semibold hover:bg-sky-400/10 hover:-translate-y-1 transition-all duration-300">Conheça nossa solução</a>
                 </div>
             </div>
         </div>
