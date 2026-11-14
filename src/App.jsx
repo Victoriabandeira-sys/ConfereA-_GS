@@ -6,6 +6,7 @@ import Solucao from './components/Solucao'
 import Demostracao from './components/Demosnstração'
 import Pratica from './components/Pratica'
 import Criterios from './components/Criterios'
+import Contatos from './components/Contatos'
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Solucao />
       <Demostracao />
       <Pratica />
+      <Contatos />
     </>
   } />
       <Route path="/criterios" element={<Criterios />} />
