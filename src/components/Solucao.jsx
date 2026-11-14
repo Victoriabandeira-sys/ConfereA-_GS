@@ -1,6 +1,6 @@
 function Solucao(){
     return(
-    <section id="solucao" className="min-h-screen bg-blue-950 text-white flex items-center px-10 py-20 max-sm:px-5">
+    <section id="solucao" className="min-h-screen bg-[radial-gradient(ellipse_at_top_right,#125c92_0%,#073253_40%,#020911_100%)] text-white flex items-center px-10 py-20 max-sm:px-5">
         <div className="max-w-7xl mx-auto w-full">
                 <h2 className="text-5xl font-bold mdd-6 max-sm:text-3xl">Nossa Solução</h2>
 

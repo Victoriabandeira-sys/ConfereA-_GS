@@ -1,9 +1,9 @@
 function Demostracao(){
     return(
-        <section id="demonstracao" className="min-h-screen bg-blue-950 text-white flex items-center px-10 py-20 max-sm:px-5">
+        <section id="demonstracao" className="min-h-screen bg-[linear-gradient(135deg,#020911_0%,#062d4f_55%,#07182c_100%)] text-white flex items-center px-10 py-20 max-sm:px-5">
             
             <div className="w-full max-w-6xl mx-auto flex items-center justify-between gap-16 max-lg:flex-col max-lg:gap-10">
-                <div className="w-1/2 max-lg:w-full">
+                <div className="w-1/2 max-lg:w-full border border-white/30 rounded-2xl p-8 transition-all duration-300 hover:-translate-y-3 hover:border-sky-400 hover:shadow-xl">
                     <h2 className="text-5xl font-bold mb-6 max-sm:text-3xl">Demonstração</h2>
 
                     <h3 className="text-2xl font-semibold mb-5 max-sm:text-xl">Conheça o Confere Aí na prática</h3>

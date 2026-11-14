@@ -54,7 +54,7 @@ function Pratica() {
     }
 
 return (
-    <section id="pratica" className="min-h-screen bg-blue-950 text-white px-10 py-20 max-sm:px-5">
+    <section id="pratica" className="min-h-screen bg-[radial-gradient(ellipse_at_center,#0d4776_0%,#082541_50%,#020911_100%)] text-white px-10 py-20 max-sm:px-5">
         <div className="max-w-6xl mx-auto">
 
             <h2 className="text-5xl font-bold mb-6 text-center max-sm:text-3xl">Veja na Prática</h2>

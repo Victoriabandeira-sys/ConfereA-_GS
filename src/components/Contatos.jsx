@@ -59,7 +59,7 @@ async function excluirContato(id) {
 }
 
 return (
-    <section className="min-h-screen bg-blue-950 text-white px-10 py-20 max-sm:px-5">
+    <section className="min-h-screen bg-[radial-gradient(ellipse_at_bottom_left,#0d4a74_0%,#04192b_55%,#020911_100%)] text-white px-10 py-20 max-sm:px-5">
         <div className="max-w-5xl mx-auto border border-white/30 rounded-2xl p-8 max-sm:p-5">
             <h2 className="text-4xl font-bold mb-5 max-sm:text-3xl">Contatos de Confiança</h2>
 

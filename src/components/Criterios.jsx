@@ -5,7 +5,7 @@ function Criterios() {
     useEffect(() => {window.scrollTo(0, 0)}, [])
 
     return (
-        <section className="min-h-screen bg-blue-950 text-white px-10 py-16 max-sm:px-5">
+        <section className="min-h-screen bg-[linear-gradient(160deg,#020911_0%,#0c3559_50%,#020911_100%)] text-white px-10 py-16 max-sm:px-5">
 
         <div className="max-w-5xl mx-auto">
 

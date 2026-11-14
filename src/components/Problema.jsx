@@ -1,7 +1,7 @@
 function Problema() {
     return (
         
-        <section id="problema" className="min-h-screen flex items-center bg-cover bg-center bg-no-repeat text-white px-10 py-20 max-sm:px-5 bg-blue-950"
+        <section id="problema" className="min-h-screen flex items-center bg-cover bg-center bg-no-repeat text-white px-10 py-20 max-sm:px-5 bg-[radial-gradient(ellipse_at_left,#145b91_0%,#082c50_45%,#020911_100%)]"
         >
 
 
