@@ -1,10 +1,10 @@
 function Navbar() {
     return (
-        <div id="inicio" className="min-h-screen bg-[#020911] bg-[radial-gradient(ellipse_at_center,#0a4778_0%,#04192b_50%,#020911_100%)]">
+        <div id="#inicio" className="min-h-screen bg-[#020911] bg-[radial-gradient(ellipse_at_center,#0a4778_0%,#04192b_50%,#020911_100%)]">
         
         <header className="w-full">
             <nav className="flex flex-wrap items-center justify-end gap-8 px-12 py-8 text-white font-medium max-lg:justify-center max-lg:gap-4 max-lg:p-5 max-[680px]:gap-3 max-[680px]:p-[15px]">
-            <a href="inicio" className="whitespace-nowrap hover:text-sky-300 max-[680px]:text-xs">Home</a>
+            <span className="whitespace-nowrap hover:text-sky-300 max-[680px]:text-xs">Home</span>
             <a href="#problema" className="whitespace-nowrap hover:text-sky-300 max-[680px]:text-xs">Problema</a>
             <a href="#solucao" className="whitespace-nowrap hover:text-sky-300 max-[680px]:text-xs">Nossa Solução</a>
             <a href="#demonstracao" className="whitespace-nowrap hover:text-sky-300 max-[680px]:text-xs">Demonstração</a>

@@ -1,62 +1,21 @@
-import { useState, useEffect } from 'react'
-import {buscarContatos,cadastrarContato,editarContato,removerContato} from '../services/contatosApi'
+import useContatos from '../hooks/useContatos'
 
 function Contatos() {
-    const [contatos, setContatos] = useState([])
-    const [nome, setNome] = useState('')
-    const [telefone, setTelefone] = useState('')
-    const [parentesco, setParentesco] = useState('')
-    const [idEditando, setIdEditando] = useState(null)
-    const [erro, setErro] = useState('')
+    const {
+        contatos,
+        nome,
+        setNome,
+        telefone,
+        setTelefone,
+        parentesco,
+        setParentesco,
+        idEditando,
+        erro,
+        salvarContato,
+        selecionarContato,
+        excluirContato
+} = useContatos()
 
-    async function carregarContatos() {
-        try {
-        const dados = await buscarContatos()
-        setContatos(dados)
-        setErro('')
-        } catch {
-        setErro('Erro ao carregar os contatos.')
-        }
-    }
-
-useEffect(() => {carregarContatos()}, [])
-
-async function salvarContato(e) {e.preventDefault()
-
-const dados = { nome, telefone, parentesco }
-
-try {
-    if (idEditando) {
-        await editarContato(idEditando, dados)
-    } else {
-        await cadastrarContato(dados)
-    }
-
-    await carregarContatos()
-        setNome('')
-        setTelefone('')
-        setParentesco('')
-        setIdEditando(null)
-        } catch {
-        setErro('Erro ao salvar contato.')
-        }
-    }
-
-function selecionarContato(contato) {
-    setNome(contato.nome)
-    setTelefone(contato.telefone)
-    setParentesco(contato.parentesco)
-    setIdEditando(contato.id)
-}
-
-async function excluirContato(id) {
-    try {
-    await removerContato(id)
-    await carregarContatos()
-    } catch {
-    setErro('Erro ao excluir contato.')
-    }
-}
 
 return (
     <section id='contatos' className="min-h-screen bg-[radial-gradient(ellipse_at_bottom_left,#0d4a74_0%,#04192b_55%,#020911_100%)] text-white px-10 py-20 max-sm:px-5">

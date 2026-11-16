@@ -1,57 +1,18 @@
-import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import useVerificacao from '../hooks/useVerificacao'
 
 function Pratica() {
-    const [mensagem, setMensagem] = useState('')
-    const [resultadoMensagem, setResultadoMensagem] = useState('')
-    const [link, setLink] = useState('')
-    const [resultadoLink, setResultadoLink] = useState('')
+    const {
+    mensagem,
+    setMensagem,
+    resultadoMensagem,
+    link,
+    setLink,
+    resultadoLink,
+    verificarMensagem,
+    verificarLink
+    } = useVerificacao()
 
-    function verificarMensagem() {
-        if (mensagem.trim() === '') {setResultadoMensagem('Digite uma mensagem para verificar.') 
-        return
-        }
-
-        const texto = mensagem.toLowerCase()
-
-        const palavrasSuspeitas = [
-        'pix', 'senha', 'urgente', 'clique',
-        'bloqueado', 'bloqueada', 'código',
-        'codigo', 'transferência', 'transfira'
-        ]
-
-        const suspeita = palavrasSuspeitas.some(palavra => texto.includes(palavra)
-        )
-
-        if (suspeita) {setResultadoMensagem('Atenção! Esta mensagem apresenta possíveis sinais de golpe. Não envie dinheiro ou informações pessoais sem confirmar.')
-        } else {
-        setResultadoMensagem('Não encontramos sinais comuns de golpe nesta mensagem. Mesmo assim, tenha cuidado: isso não garante que ela seja segura.')
-        }
-    }
-
-    function verificarLink() {
-        if (link.trim() === '') {setResultadoLink('Digite um link para verificar.')
-        return
-        }
-
-        try {const endereco = new URL(link.trim())
-
-        if (endereco.protocol !== 'https:' && endereco.protocol !== 'http:') {
-            setResultadoLink('Este endereço não é um link HTTP válido.')
-            return
-        }
-
-        if (
-            endereco.protocol === 'http:' ||
-            endereco.hostname.includes('xn--') ||
-            link.includes('@')
-        ) {
-            setResultadoLink('Atenção! Encontramos possíveis sinais de risco neste link. Evite acessá-lo sem confirmar a origem.')
-        } else {
-            setResultadoLink('Não encontramos alguns sinais comuns de risco. Isso não garante que o link seja seguro.')
-        }
-        } catch {setResultadoLink('Link inválido. Digite um endereço completo, começando com https://.')}
-    }
 
 return (
     <section id="pratica" className="min-h-screen bg-[radial-gradient(ellipse_at_center,#0d4776_0%,#082541_50%,#020911_100%)] text-white px-10 py-20 max-sm:px-5">
@@ -74,7 +35,7 @@ return (
             <div className="border border-white/30 rounded-2xl p-8 max-sm:p-5">
                 <h3 className="text-2xl font-bold mb-4">Verificar Link</h3>
                 <p className="mb-6">Recebeu um link desconhecido? Verifique possíveis sinais de risco antes de abrir.</p>
-                <input type="text"value={link} onChange={(e) => setLink(e.target.value)} placeholder="https://exemplo.com" className="w-full bg-white text-blue-950 p-4 rounded-xl mb-5 outline-none"/>
+                <input type="text" value={link} onChange={(e) => setLink(e.target.value)} placeholder="https://exemplo.com" className="w-full bg-white text-blue-950 p-4 rounded-xl mb-5 outline-none"/>
                 <button onClick={verificarLink} className="bg-sky-500 hover:bg-sky-400 text-white font-semibold px-8 py-3 rounded-xl transition-colors cursor-pointer">Verificar Link</button>
 
                 {resultadoLink && (
@@ -84,7 +45,7 @@ return (
 
             </div>
             
-            <p className="text-sm text-blue-200 mt-8 text-center">Esta é uma verificação inicial de sinais de risco.Não compartilhe senhas, códigos ou dados pessoais.</p>
+            <p className="text-sm text-blue-200 mt-8 text-center">Esta é uma verificação inicial de sinais de risco. Não compartilhe senhas, códigos ou dados pessoais.</p>
             
             <div className="text-center mt-12">
                 <p className="text-lg mb-5">Quer entender como identificamos possíveis golpes?</p>
