@@ -60,7 +60,10 @@ return (
         </div>
 
         <div className="flex justify-center items-center py-8 px-6">
-            <a href="#inicio" className="rounded-full transition duration-300 no-underline font-semibold text-white bg-sky-600/20 px-12 py-3.5 border border-sky-400 hover:bg-sky-400/20 hover:text-sky-300">Voltar ao início </a>
+            <button
+                type="button"
+                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                className="rounded-full transition duration-300 font-semibold text-white bg-sky-600/20 px-12 py-3.5 border border-sky-400 hover:bg-sky-400/20 hover:text-sky-300 cursor-pointer">Voltar ao início</button>
         </div>
 
     </section>
