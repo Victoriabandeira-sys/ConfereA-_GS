@@ -89,4 +89,4 @@ Após o comando rodar com sucesso, digite a letra "o" para abrir no servidor loc
 
 A aplicação foi publicada no link abaixo:
 
-**[Clique aqui para acessar o Deploy na Vercel]()**  
+**[Clique aqui para acessar o Deploy na Vercel](https://confere-a-gs.vercel.app/)**  
