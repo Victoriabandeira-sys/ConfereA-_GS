@@ -1,16 +1,55 @@
-# React + Vite
+# Global Solution - CitizenTech 
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+## Descrição do nosso projeto -> Confere Aí: Uma proteção contra golpes digitais
 
-Currently, two official plugins are available:
+O Confere Aí é uma aplicação desenvolvida para proteger pessoas com 60 anos ou mais contra golpes digitais, como falsos pedidos de Pix urgente, links maliciosos e ligações suspeitas.
+O sistema funciona como uma segunda opinião explicada e acessível antes de o usuário clicar em links ou transferir dinheiro. É formado por uma interface projeta da com critérios rigorosos de usabilidade sênior — tipografia ampliada, alto contraste, botões grandes e linguagem cotidiana sem termos técnicos, o aplicativo permite: verificar mensagens e links suspeitos, aprender de forma preventiva e atalhos para acionar contatos de confiança.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Tecnologias Utilizadas
 
-## React Compiler
+- **React**
+- **TypeScript** 
+- **Vite**
+- **Tailwind CSS**
+- **Git & GitHub** 
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Como Instalar as Dependências
 
-## Expanding the Oxlint configuration
+Para rodar esse projeto na sua máquina local, certifique-se de ter o [Node.js](https://nodejs.org) instalado. Uma vez instalado, siga os passos abaixo:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+1. Clone este repositório para o seu computador:
+   ```bash
+   git clone https://github.com/Victoriabandeira-sys/Sprint-4-web-front.git
+   ```
+
+2. Acesse a subpasta principal do projeto (onde contém os arquivos do código):
+   ```bash
+   cd sprint4-jovi
+   ```
+
+3. Instale todas as dependências necessárias:
+   ```bash
+   npm i
+   ```
+      ou 
+   ```bash
+   npm install
+   ```
+
+
+## Como Executar o Projeto
+
+Após instalar as dependências, inicie o servidor de desenvolvimento local com o comando:
+
+```bash
+npm run dev
+```
+
+Após o comando rodar com sucesso, digite a letra "o" para abrir no servidor local.
+
+
+## Link do Deploy (Vercel)
+
+A aplicação foi publicada no link abaixo:
+
+**[Clique aqui para acessar o Deploy na Vercel]()**  
