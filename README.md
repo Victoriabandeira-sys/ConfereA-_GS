@@ -19,12 +19,12 @@ Para rodar esse projeto na sua máquina local, certifique-se de ter o [Node.js](
 
 1. Clone este repositório para o seu computador:
    ```bash
-   git clone https://github.com/Victoriabandeira-sys/Sprint-4-web-front.git
+   git clone https://github.com/Victoriabandeira-sys/ConfereA-_GS.git
    ```
 
 2. Acesse a subpasta principal do projeto (onde contém os arquivos do código):
    ```bash
-   cd sprint4-jovi
+   cd ConfereA-_GS
    ```
 
 3. Instale todas as dependências necessárias:
