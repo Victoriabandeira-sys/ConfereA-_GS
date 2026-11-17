@@ -9,14 +9,14 @@ function Demostracao(){
 
                     <div className="mt-10 border-l-2 border-sky-400 pl-5">
                         <p className="text-sky-400 text-sm font-semibold tracking-widest mb-3">PROTÓTIPO EM AÇÃO</p>
-                        <p className="text-gray-300 leading-relaxed">Veja como o Confere Aí facilita a identificação de situações suspeitas e o acesso a pessoas de confiança.</p>
+                        <p className="text-gray-300 leading-relaxed">Veja como o nosso App Confere Aí facilita a identificação de situações suspeitas e o acesso a pessoas de confiança.</p>
                     </div>
                 </div>
                 
                 <div className="w-[300px] max-w-full rounded-[40px] border-[8px] border-black bg-black p-1 shadow-2xl">
                     <div className="w-16 h-1 bg-gray-600 rounded-full mx-auto my"></div>
                     <div className="relative w-full aspect-[9/18] rounded-[28px] overflow-hidden">
-                    <video src="/img/MicrosoftTeams-video.mp4" autoPlay loop muted playsInline preload="metadata" className="absolute inset-0 w-full h-full object-cover scale-[1.15]"/></div>
+                    <video src="/img/Video Project.mp4" autoPlay loop muted playsInline preload="metadata" className="absolute inset-0 w-full h-full object-cover scale-[1.50] -translate-y-13"/></div>
                 </div>
             </div>
         </section>

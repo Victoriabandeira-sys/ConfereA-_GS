@@ -25,10 +25,8 @@ const suspeita = palavrasSuspeitas.some(palavra =>
     texto.includes(palavra)
 )
 
-if (suspeita) {
-  setResultadoMensagem('Atenção! Esta mensagem apresenta possíveis sinais de golpe. Não envie dinheiro ou informações pessoais sem confirmar.')
-    } else {setResultadoMensagem('Não encontramos sinais comuns de golpe nesta mensagem. Mesmo assim, isso não garante que ela seja segura.'
-        )
+if (suspeita) {setResultadoMensagem('Atenção! Esta mensagem apresenta possíveis sinais de golpe. Não envie dinheiro ou informações pessoais sem confirmar.')
+    } else {setResultadoMensagem('Não identificamos padrões suspeitos nesta mensagem. Mesmo assim, desconfie se pedirem dinheiro, códigos ou senhas e confirme com alguém de confiança.')
     }
 }
 
@@ -39,7 +37,7 @@ function verificarLink() {
     }
     try {
         const endereco = new URL(link.trim())
-            if (endereco.protocol !== 'https:' && endereco.protocol !== 'http:') {setResultadoLink('Este endereço não é um link HTTP válido.')
+            if (endereco.protocol !== 'https:' && endereco.protocol !== 'http:') {setResultadoLink('Este endereço não é um link HTTP válido')
     return
     }
 
@@ -53,7 +51,7 @@ function verificarLink() {
             )
         } else {
             setResultadoLink(
-            'Não encontramos alguns sinais comuns de risco. Isso não garante que o link seja seguro.'
+            'Não encontramos sinais comuns de risco neste link. Ainda assim, verifique o endereço com atenção antes de inserir senhas ou dados.'
             )
         }
         } catch {
@@ -63,6 +61,16 @@ function verificarLink() {
         }
     }
 
+function limparMensagem() {
+    setMensagem('')
+    setResultadoMensagem('')
+}
+
+function limparLink() {
+    setLink('')
+    setResultadoLink('')
+}
+
     return {
         mensagem,
         setMensagem,
@@ -71,7 +79,9 @@ function verificarLink() {
         setLink,
         resultadoLink,
         verificarMensagem,
-        verificarLink
+        verificarLink,
+        limparMensagem,
+        limparLink
     }
 }
 

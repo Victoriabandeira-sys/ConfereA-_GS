@@ -1,19 +1,21 @@
 function Navbar() {
     return (
-        <div id="#inicio" className="min-h-screen bg-[#020911] bg-[radial-gradient(ellipse_at_center,#0a4778_0%,#04192b_50%,#020911_100%)]">
+        <div id="inicio" className="min-h-screen bg-[#020911] bg-[radial-gradient(ellipse_at_center,#0a4778_0%,#04192b_50%,#020911_100%)]">
         
-        <header className="w-full">
-            <nav className="flex flex-wrap items-center justify-end gap-8 px-12 py-8 text-white font-medium max-lg:justify-center max-lg:gap-4 max-lg:p-5 max-[680px]:gap-3 max-[680px]:p-[15px]">
-            <span className="whitespace-nowrap hover:text-sky-300 max-[680px]:text-xs">Home</span>
-            <a href="#problema" className="whitespace-nowrap hover:text-sky-300 max-[680px]:text-xs">Problema</a>
-            <a href="#solucao" className="whitespace-nowrap hover:text-sky-300 max-[680px]:text-xs">Nossa Solução</a>
-            <a href="#demonstracao" className="whitespace-nowrap hover:text-sky-300 max-[680px]:text-xs">Demonstração</a>
-            <a href="#pratica" className="whitespace-nowrap hover:text-sky-300 max-[680px]:text-xs">Veja na Prática</a>
-            <a href="#contatos" className="whitespace-nowrap hover:text-sky-300 max-[680px]:text-xs">Contatos de confiança</a>
+        <header className="w-full min-h-20 p-4 md:p-[2%] flex flex-wrap justify-between items-center bg-[#04192b] fixed top-0 z-[100] gap-4 overflow-y-autorun">
+        <a href="#inicio" className="text-white no-underline text-xl font-bold">CONFERE AÍ</a>
+
+        <nav className="hidden md:flex gap-4 lg:gap-[30px] list-none overflow-y-auto">
+            <li><a href="#inicio" className="text-white no-underline transition-colors duration-300 whitespace-nowrap hover:text-sky-300">Home</a></li>
+            <li><a href="#problema" className="text-white no-underline transition-colors duration-300 whitespace-nowrap hover:text-sky-300">Problema</a></li>
+            <li><a href="#solucao" className="text-white no-underline transition-colors duration-300 whitespace-nowrap hover:text-sky-300">Nossa Solução</a></li>
+            <li><a href="#demonstracao" className="text-white no-underline transition-colors duration-300 whitespace-nowrap hover:text-sky-300" >Demonstração</a></li>
+            <li><a href="#pratica" className="text-white no-underline transition-colors duration-300 whitespace-nowrap hover:text-sky-300">Veja na prática</a></li>
+            <li><a href="#contatos" className="text-white no-underline transition-colors duration-300 whitespace-nowrap hover:text-sky-300">Contatos de confiança</a></li>
             </nav>
-        
         </header>
-            <div className="max-w-7xl mx-auto min-h-[75vh] flex items-center justify-between gap-14 px-12 xl:scale-[1.10] max-lg:gap-6 max-lg:px-6 max-sm:flex-col max-sm:justify-center max-sm:py-12">
+
+            <div className="max-w-7xl mx-auto min-h-screen pt-20 flex items-center justify-between gap-14 px-12 xl:scale-[1.10] max-lg:gap-6 max-lg:px-6 max-sm:flex-col max-sm:justify-center max-sm:py-24">
                 <img src="/img/ConfereAi_logo.png" alt="Logo Confere Aí" className="w-[600px] max-w-full h-auto max-lg:w-[450px] max-sm:w-[300px]"/>
 
                 <div className="max-w-md text-white max-lg:text-center">

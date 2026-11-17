@@ -39,7 +39,6 @@ return (
             )}
 
         <div className="grid gap-4">
-
             {contatos.map((contato) => (
             <div key={contato.id} className="border border-white/30 rounded-xl p-6 flex justify-between items-center gap-4 max-sm:flex-col max-sm:items-start">
 
@@ -53,8 +52,7 @@ return (
                     <button onClick={() => selecionarContato(contato)} className="border border-sky-400 px-4 py-2 rounded-lg hover:bg-sky-500 cursor-pointer">Editar</button>
                     <button onClick={() => excluirContato(contato.id)} className="border border-white/40 px-4 py-2 rounded-lg hover:bg-red-700 cursor-pointer">Excluir</button>
                 </div>
-
-            </div>
+        </div>
         ))}
         </div>
         </div>
