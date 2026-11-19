@@ -1,6 +1,6 @@
 # Global Solution - CitizenTech 
 
-## Descrição do nosso projeto -> Confere Aí: Uma proteção contra golpes digitais
+## Breve descrição do nosso projeto -> Confere Aí: Uma proteção contra golpes digitais
 
 O Confere Aí é uma aplicação desenvolvida para proteger pessoas com 60 anos ou mais contra golpes digitais, como falsos pedidos de Pix urgente, links maliciosos e ligações suspeitas.
 O sistema funciona como uma segunda opinião explicada e acessível antes de o usuário clicar em links ou transferir dinheiro. A interface foi desenvolvida considerando a usabilidade do público idoso, com tipografia ampliada, alto contraste, botões grandes e linguagem simples.
@@ -95,6 +95,13 @@ consegue me fazer um Pix de R$ 450,00? Depois te devolvo a transferência."
 http://atualizacao-cadastral-banco-urgente.com
 ```
 
+## Integrantes e RM´s
+
+- Enzo Oldani Camargo – RM571685
+- Giulia Mardegan Russo – RM571468
+- Kauan de Carlo Merida – RM573997
+- Kayque Amaro Martins Souza – RM572031
+- Victoria Bandeira Berumen – RM571183
 
 ## Link do Deploy (Vercel)
 
