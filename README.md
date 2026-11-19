@@ -84,6 +84,17 @@ npm run dev
 
 Após o comando rodar com sucesso, digite a letra "o" para abrir no servidor local.
 
+## Exemplo de mensagem suspeita para testar
+```
+"Oi mãe, troquei de número hoje. Preciso pagar uma conta agora e meu aplicativo deu erro,
+consegue me fazer um Pix de R$ 450,00? Depois te devolvo a transferência."
+```
+
+## Exemplo de link suspeito para testar
+```
+http://atualizacao-cadastral-banco-urgente.com
+```
+
 
 ## Link do Deploy (Vercel)
 
